@@ -709,39 +709,59 @@ body {
   }
 }
 
-/* 우 하단 고정 챗봇 버튼 스타일 */
+/* 우 하단 고정 챗봇 버튼 스타일 (첨부 이미지처럼) */
 .chatbot-fab {
   position: fixed;
   right: 32px;
   bottom: 32px;
   z-index: 9999;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 28px 0 16px;
+  height: 64px;
+  min-width: 170px;
+  background: #0078ff;
+  border-radius: 32px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  text-decoration: none;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+.chatbot-fab:hover {
+  background: #005bb5;
+  box-shadow: 0 8px 32px rgba(0,120,255,0.25);
+  transform: translateY(-2px) scale(1.04);
+}
+.chatbot-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.18s, box-shadow 0.18s;
+  width: 40px;
+  height: 40px;
+  background: none;
 }
-.chatbot-fab:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 32px rgba(0,120,255,0.25);
-  background: #005bb5;
-}
-.chatbot-fab svg {
-  display: block;
+.chatbot-label {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 @media (max-width: 600px) {
   .chatbot-fab {
-    right: 16px;
-    bottom: 16px;
-    width: 44px;
-    height: 44px;
+    right: 10px;
+    bottom: 10px;
+    height: 48px;
+    min-width: 110px;
+    padding: 0 14px 0 8px;
+    gap: 7px;
   }
-  .chatbot-fab svg {
-    width: 30px;
-    height: 30px;
+  .chatbot-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .chatbot-label {
+    font-size: 1.01rem;
   }
 } 
