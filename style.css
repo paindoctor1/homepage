@@ -707,4 +707,41 @@ body {
     font-size: 0.93rem;
     margin-top: 12px;
   }
+}
+
+/* 우 하단 고정 챗봇 버튼 스타일 */
+.chatbot-fab {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 9999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.chatbot-fab:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 32px rgba(0,120,255,0.25);
+  background: #005bb5;
+}
+.chatbot-fab svg {
+  display: block;
+}
+@media (max-width: 600px) {
+  .chatbot-fab {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+  }
+  .chatbot-fab svg {
+    width: 30px;
+    height: 30px;
+  }
 } 
